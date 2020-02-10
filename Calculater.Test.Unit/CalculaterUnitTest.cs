@@ -17,8 +17,7 @@ namespace Calculater.Test.Unit
         {
             uut = new LabCal1.Calculater();
         }
-        
-        [TestCase(3, 2, 5)]
+
         [TestCase(-3, -2, -5)]
         [TestCase(-3, 2, -1)]
         [TestCase(-3, 1, -2)]
@@ -27,7 +26,6 @@ namespace Calculater.Test.Unit
             Assert.That(uut.Add(a, b), Is.EqualTo(result));
         }
 
-        [TestCase(3, 2, 1)]
         [TestCase(-3, -2, -1)]
         [TestCase(-3, 2, -5)]
         [TestCase(-3, 3, -6)]
@@ -36,7 +34,6 @@ namespace Calculater.Test.Unit
             Assert.That(uut.Subtract(a, b), Is.EqualTo(result));
         }
 
-        [TestCase(3, 2, 6)]
         [TestCase(-3, -2, 6)]
         [TestCase(-3, 2, -6)]
         [TestCase(-3, -3, 9)]
@@ -45,7 +42,6 @@ namespace Calculater.Test.Unit
             Assert.That(uut.Multiply(a, b), Is.EqualTo(result));
         }
 
-        [TestCase(10, 5, 2)]
         [TestCase(15, 5, 3)]
         [TestCase(8, 2, 4)]
         [TestCase(22, 2, 11)]
@@ -62,7 +58,6 @@ namespace Calculater.Test.Unit
             Assert.That(uut.Power(a, b), Is.EqualTo(result));
         }
 
-        [TestCase(10, 5, 15)]
         [TestCase(15, 5, 20)]
         [TestCase(8, 2, 10)]
         [TestCase(1, 2, 3)]
@@ -74,7 +69,6 @@ namespace Calculater.Test.Unit
             Assert.IsTrue(sumResult);
         }
 
-        [TestCase(10, 5, 0)]
         [TestCase(15, 5, 0)]
         [TestCase(8, 2, 0)]
         [TestCase(5, 5, 0)]
@@ -86,8 +80,6 @@ namespace Calculater.Test.Unit
             bool sumResult = uut.Accumulator == result;
             Assert.IsTrue(sumResult);
         }
-
     }
-
 }
  

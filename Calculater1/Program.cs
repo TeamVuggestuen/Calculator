@@ -13,7 +13,6 @@ namespace LabCal1
             // Declare the unit-under-test
             var uut = new Calculater();
 
-
             //hej
 
             // Test Add()

@@ -53,6 +53,8 @@ namespace Calculater.Test.Unit
 
 
         [TestCase(0, 5)]
+        [TestCase(5, 0)]
+        [TestCase(0, 0)]
         public void testExceptionOnDivideByZero(double a, double b)
         {
             Assert.That(() => uut.Divide(a, b), Throws.TypeOf<Calculator1.divideByZeroException>());

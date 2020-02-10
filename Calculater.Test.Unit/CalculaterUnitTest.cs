@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using Calculator1;
 
 namespace Calculater.Test.Unit
 {
@@ -49,6 +50,14 @@ namespace Calculater.Test.Unit
         {
             Assert.That(uut.Divide(a, b), Is.EqualTo(result));
         }
+
+
+        [TestCase(0, 5)]
+        public void testExceptionOnDivideByZero(double a, double b)
+        {
+            Assert.That(() => uut.Divide(a, b), Throws.TypeOf<Calculator1.divideByZeroException>());
+        }
+
 
         [TestCase(2, 3, 8)]
         [TestCase(3, 3, 27)]

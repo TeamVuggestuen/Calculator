@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Calculater1;
+using Calculator1;
 
 namespace LabCal1
 {
@@ -37,14 +37,15 @@ namespace LabCal1
 
         public double Divide(double a, double b)
         {
-            if (a != 0 || b != 0)
+            if (a == 0)
+            {
+                throw new divideByZeroException();
+            }
+            else
             {
                 Accumulator = a / b;
                 return Accumulator;
             }
-
-            else
-                throw new divideByZeroException(a,b); 
         }
 
         public double Power(double x, double exp)

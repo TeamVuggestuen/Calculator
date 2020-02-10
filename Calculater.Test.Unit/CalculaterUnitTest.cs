@@ -44,7 +44,7 @@ namespace Calculater.Test.Unit
         }
 
         [TestCase(15, 5, 3)]
-        [TestCase(8, 2, 4)]
+        [TestCase(10, 2, 5)]
         [TestCase(22, 2, 11)]
         public void Divide_a_and_b_return_result(int a, int b, int result)
         {

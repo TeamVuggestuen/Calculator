@@ -54,19 +54,6 @@ namespace LabCal1
             return Accumulator;
         }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
+       
     }
 }

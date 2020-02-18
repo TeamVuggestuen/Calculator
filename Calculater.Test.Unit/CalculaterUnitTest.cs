@@ -29,7 +29,7 @@ namespace Calculater.Test.Unit
 
         [TestCase(-3, -2, -1)]
         [TestCase(-3, 2, -5)]
-        [TestCase(-3, 3, -6)]
+        [TestCase(-4, 3, -7)]
         public void Subtract_a_and_b_return_result(int a, int b, int result)
         {
             Assert.That(uut.Subtract(a, b), Is.EqualTo(result));
